@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Inter Regular';
+    src: url("../assets/fonts/Inter-ExtraBold.ttf");
+
+    font-family: 'Inter Extralight';
+    src: url("../assets/fonts/Inter-ExtraLight.ttf");
+}
+
+:root {
+    /*Fonts*/
+    
+    --inter: 'Inter Regular', sans-serif;
+    --inter-extralight: 'Inter Extralight', sans-serif;
+
+    /*Colors*/
+    --purple: #952890;
+}

@@ -1,0 +1,126 @@
+@import '/src/styles/variable.css';
+
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+.Home-header{
+    border-bottom: 2px solid var(--purple);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+    height: 6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    font-family: var(--inter);    
+    font-style: italic;
+    background: linear-gradient(var(--purple) , #000000);
+    background-clip: text;
+    color: transparent;
+    font-size: 3.5em;
+    padding-inline: 0.15em;
+}
+
+.left-icons,
+.right-icons{
+    display: flex;
+    align-items: center;
+}
+
+.left-icons{
+    padding-left: 1em;
+}
+
+.right-icons{
+    padding-right: 1em;
+}
+
+.icon_menu,
+.icon_bell,
+.icon_user {
+  margin-right: 10px; /* Espacio entre los íconos */
+}
+
+.icon_menu{
+    width: 3em;
+    height: 3em;
+    color: var(--purple);
+}
+
+.icon_menu:hover{
+    cursor: pointer;
+}
+
+.icon_bell{
+    width: 3em;
+    height: 3em;
+}
+
+.icon_bell:hover{
+    cursor: pointer;
+}
+
+.icon_user{
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.icon_user:hover{
+    cursor: pointer;
+}
+
+
+.sidebar {
+    border-right: 1px solid var(--purple);
+    width: 14em;
+    height: 100%;
+    padding-inline: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+.homebtn,
+.searchbtn,
+.joinbtn{
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.homebtn{
+    color: var(--purple);
+}
+
+.btnCircle{
+    display: grid;
+    place-items: center;
+    margin-bottom: 2em;
+
+}
+
+.addCircle{
+    color: var(--purple);
+    width: 4.5em;
+    height: 4.5em;
+}
+
+.icon-with-name {
+    display: flex;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.icon-name {
+    margin-left: 10px; 
+    font-family: var(--inter-extralight);
+    font-size: 1.2em;
+    font-weight: 100;
+
+}
