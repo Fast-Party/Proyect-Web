@@ -3,9 +3,12 @@ import './Login.css';
 function Login() {
     return (
         <div className='Login'>
+            {/* <h1 className='title'>FAST PARTY</h1> */}
+            <img href="../img/titler.png" width={"50%"} className='imgTitle'></img>
             <div className='inputBox'>
                 <form>
                     <h3>Sign In</h3>
+                    <hr className='titleSeparation'/>
                     <div className='mb-2'>
                         <input placeholder='Username' className='form-control'></input>
                     </div>
