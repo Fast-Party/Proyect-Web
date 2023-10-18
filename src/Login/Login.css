@@ -9,29 +9,53 @@
 
 }
 
-.title{
-    background: linear-gradient(0deg, #fff 10%, #e667df 55%);
-    color: white;
-    background-size: 100%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
 
-    z-index: 1;
+.sweet-title {
+    /* transform: skew(0, ); */
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: clamp(3rem, 10vw, 4rem);
+
+    /* line-height: 0em; */
+    text-align: center;
+    text-shadow: 3px 1px 1px #e9a1ee, 2px 2px 1px #d340cc, 4px 2px 1px #e9a1ee,
+        3px 3px 1px #d340cc, 5px 3px 1px #e9a1ee, 4px 4px 1px #d340cc,
+        6px 4px 1px #b845c0, 5px 5px 1px #af2fa9, 7px 5px 1px #a639ad;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+
+    &:before {
+        position: absolute;
+
+        z-index: 1;
+    }
+
+    z-index: 2;
     display: flex;
     text-align: center;
     align-items: center;
     position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
     bottom: 80%;
+    transition: 0.5s;
 }
 
-.titleSeparation{
+.sweet-title:hover {
+    letter-spacing: 4px;
+    /* color: #af2fa9;
+    text-shadow: 0 0 1.05em #fff, 0 0 1.2em #fe05e1, 0 0 1.3em #dd31dd;
+    transform: rotate(-2deg); */
+}
+
+.titleSeparation {
     border-top: 2px solid #952890;
 }
+
 .inputBox {
-    z-index: 1;
-    width: 40;
+    z-index: 3;
+    margin-top: 5%;
+    width: 30%;
     padding: 5vh;
     text-align: center;
     align-items: center;
@@ -40,6 +64,38 @@
     background-color: white;
 }
 
+.buttonLogin {
+    align-items: center;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    height: 180%;
+
+    border: 2px solid #FFF;
+
+    color: white;
+    background: #F5BAFF;
+    transition: 0.8s;
+}
+
+.buttonLogin:hover {
+    color: #F5BAFF;
+    border-radius: 0.5ch;
+    /* Adjust the border-radius value */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #F5BAFF;
+    box-shadow: 0px 4px 4px 0px #F5BAFF;
+    background-color: transparent;
+    
+}
+
+.text-right {
+    margin-top: 10%;
+}
+
+
+/* FONDO */
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -58,6 +114,7 @@
 .in-top {
     animation: rotate 20s alternate infinite;
     transform-origin: 23px 25px;
+    z-index: 2;
 }
 
 .out-bottom {

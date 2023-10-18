@@ -3,8 +3,11 @@ import './Login.css';
 function Login() {
     return (
         <div className='Login'>
-            <h1 className='title'>FAST PARTY</h1>
-            <div className='inputBox'>
+        <h1 class="sweet-title">
+            <span  data-text="Fast Party">Fast Party</span>
+            {/* <span data-text="Party">Party</span> */}
+        </h1>        
+        <div className='inputBox'>
                 <form>
                     <h3>Sign In</h3>
                     <hr className='titleSeparation'/>
@@ -21,8 +24,8 @@ function Login() {
                         </label>
                     </div>
                     <div className='d-grid'>
-                        <button className='btn btn-primary'>
-                            Login
+                        <button className='buttonLogin'>
+                            LOGIN
                         </button>
                     </div>
                     <p className='text-right'>
