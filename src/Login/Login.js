@@ -5,24 +5,18 @@ function Login() {
         <div className='Login'>
         <h1 class="sweet-title">
             <span  data-text="Fast Party">Fast Party</span>
-            {/* <span data-text="Party">Party</span> */}
-        </h1>        
+        </h1>
         <div className='inputBox'>
                 <form>
                     <h3>Sign In</h3>
                     <hr className='titleSeparation'/>
                     <div className='mb-2'>
-                        <input placeholder='Username' className='form-control'></input>
+                        <input placeholder='Username' className='username'></input>
                     </div>
                     <div className='mb-2'>
-                        <input placeholder='Password' className='form-control'></input>
+                        <input placeholder='Password' className='password'></input>
                     </div>
-                    <div className='mb-2'>
-                        <input type='checkbox' className='custom.control custom-checkbox' id='check'></input>
-                        <label className='custom-input-label'>
-                            Remember me
-                        </label>
-                    </div>
+                    
                     <div className='d-grid'>
                         <button className='buttonLogin'>
                             LOGIN
