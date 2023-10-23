@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=League+Spartan&display=swap');
+
 .Login {
     display: flex;
     justify-content: center;
@@ -41,9 +45,13 @@
 
 .sweet-title:hover {
     letter-spacing: 4px;
-    /* color: #af2fa9;
-    text-shadow: 0 0 1.05em #fff, 0 0 1.2em #fe05e1, 0 0 1.3em #dd31dd;
-    transform: rotate(-2deg); */
+}
+
+.signIn{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 250%;
+    color: black;
+    font-weight: 400;
 }
 
 .titleSeparation {
@@ -78,7 +86,13 @@
     width: 100%;
     height: 5ch;
     padding: 3%;
+    transition: 0.3s;
 }
+.username:focus{
+    outline: 0;
+    border-color: #952890;
+}
+
 .password{
     background-color: transparent;
     border-radius: 0.7ch;
@@ -89,11 +103,15 @@
     height: 5ch;
     padding: 3%;
 }
+.password:focus{
+    outline: 0;
+    border-color: #952890;
+}
 
 .buttonLogin {
     position: relative;
     left: 14%;
-    top: 15%;
+    top: 25%;
     align-items: center;
     text-align: center;
     font-family: "Inter", sans-serif;
@@ -105,7 +123,7 @@
 
     color: white;
     background: #ee8cff;
-    transition: 0.8s;
+    transition: 0.4s;
 }
 
 .buttonLogin:hover {
@@ -118,9 +136,31 @@
     
 }
 
-.text-right {
-    margin-top: 10%;
+.changeRegister {
+    font-family: "Inter", sans-serif;
+    margin-top: 15%;
+    color: #952890;
+    font-size: 95%;
 }
+.linkChangeRegister {
+    font-family: "Inter", sans-serif;
+    color: #c404ff;
+    text-decoration: none;
+}
+
+.forgetPassword{
+    font-family: "Inter", sans-serif;
+    margin-top: 0%;    
+    color: #952890;
+    text-decoration: none;
+    font-size: 90%;
+    transition: 0.4s;
+}
+.forgetPassword:hover {
+    color: #c404ff;
+}
+
+
 
 
 /* FONDO */
