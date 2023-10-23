@@ -144,3 +144,27 @@ h1{
     background-color: var(--purple);
     margin-left: 1em;
   }
+
+
+  .userPartyInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1em;
+    align-items: center;
+    width: 100%;
+    font-family: var(--inter);
+    font-weight: 800;
+    color: var(--purple);
+  }
+
+  .imgProfileUser{
+        width: 3.5em;
+        height: 3.5em;
+        border-radius: 50%;
+        border: 1px solid var(--purple);
+  }
+
+  .nameUser{
+    font-size: 1.5em;
+  }

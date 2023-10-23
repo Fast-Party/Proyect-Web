@@ -51,12 +51,12 @@ const Home = () => {
 
         </div>
         <div className="main-content">
-          <img src="https://s3-alpha-sig.figma.com/img/0458/edbd/c3c0f6ddce4f0749daa3b7764892f0b0?Expires=1698624000&Signature=UdzY8Xfoh9M-GiOfUdCdKLuhgQmYRF2W2Skidj2BQY8tzQGy0ppa1aOfjCStxDkycbQl4d8g3oUyE~umRbJQgrKXLyBRFUWjBcLp-ZMI071AFiO6j-aN3nlT9KWpC7sZNWSxBYrOUz9Fy66gnO~y7YwxKSYgTQkUGXLbN14HNkbv5mnXhJXfBA8Ke3q0AOt8yjtw4TKsaWzngV26EAWOuP5jx0cnYXuJHmjTrIqtcHQ5QGScc9b4gM4e1bhWloGUY2hpBFK25TUTGdMSG08SiiqWxzogtgMEghhkHXp35gKCs76V90q1vBTlkoJvOylOGxd82G3Or14q8CQ--XAy9A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="logo" className="imgParty" />
+          <img src="https://s3-alpha-sig.figma.com/img/0458/edbd/c3c0f6ddce4f0749daa3b7764892f0b0?Expires=1698624000&Signature=UdzY8Xfoh9M-GiOfUdCdKLuhgQmYRF2W2Skidj2BQY8tzQGy0ppa1aOfjCStxDkycbQl4d8g3oUyE~umRbJQgrKXLyBRFUWjBcLp-ZMI071AFiO6j-aN3nlT9KWpC7sZNWSxBYrOUz9Fy66gnO~y7YwxKSYgTQkUGXLbN14HNkbv5mnXhJXfBA8Ke3q0AOt8yjtw4TKsaWzngV26EAWOuP5jx0cnYXuJHmjTrIqtcHQ5QGScc9b4gM4e1bhWloGUY2hpBFK25TUTGdMSG08SiiqWxzogtgMEghhkHXp35gKCs76V90q1vBTlkoJvOylOGxd82G3Or14q8CQ--XAy9A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="Party Image" className="imgParty" />
           <div className="divider"></div>
           <div className="infoParty">
             <div className='userPartyInfo'>
-              <img className='imgProfileUser'></img>
-              <span className='nameUser'>User name</span>
+              <img className='imgProfileUser' src='https://images.squarespace-cdn.com/content/v1/5446f93de4b0a3452dfaf5b0/1626904421257-T6I5V5IQ4GI2SJ8EU82M/Above+Avalon+Neil+Cybart' alt='Profile Image Host Party'></img>
+              <span className='nameUser'>Paoutxu</span>
               <button className='btnJoin'>JOIN</button>
             </div>
             <div className='partyInfo'>
