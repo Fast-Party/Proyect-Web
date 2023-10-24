@@ -1,0 +1,184 @@
+.main-content {
+    flex: 1;
+    display: flex;
+    margin: 20px 50px 40px 20px;
+    border: 2px solid var(--purple);
+    background: linear-gradient(to bottom, #FFF 0%, rgba(149, 40, 144, 0.20) 100%);
+}
+
+.imgParty {
+    width: 65%;
+    height: calc(100% - 2em);
+    margin-block: 1em;
+    margin-left: 1em;
+    object-fit: cover;
+}
+
+/* Estilos del carrusel */
+.slick-slider {
+    width: 65%; 
+    height: calc(100% - 4.2em);
+    margin-block: 1em 0em;
+    margin-inline: 1em 0em;
+    background-color: aqua;
+}
+
+.slick-slide img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.slick-prev{
+    position: absolute;
+    right: 4em; 
+    z-index: 1;
+    filter: invert(100%);
+}
+
+.slick-next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 4em; 
+    z-index: 1;
+}
+
+.slick-dots{
+    filter: invert(0%);
+}
+  
+
+.divider {
+    height: 100%;
+    width: 1px;
+    background-color: var(--purple);
+    margin-left: 1em;
+}
+
+
+.userPartyInfo {
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0 0 1em;
+    align-items: center;
+    width: 100%;
+    font-family: var(--inter);
+    font-weight: 800;
+    color: var(--purple);
+}
+
+
+
+/*BUTTON JOIN PARTY*/
+
+.userPartyInfo .btnJoin {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-family: var(--inter);
+    background-color: #F5BAFF;
+    font-weight: 800;
+    width: 9em;
+    height: 2.5em;
+    color: var(--purple);
+    border: 2px solid var(--purple);
+    border-radius: 4px;
+    box-shadow: 0px 3px 4px var(--purple);
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.userPartyInfo .btnJoin:hover {
+    background-color: var(--purple);
+}
+
+.userPartyInfo .btnJoin::after {
+    content: "";
+    position: absolute;
+    background: var(--purple);
+    ;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+    transition: 0.3s ease-in-out all;
+}
+
+.userPartyInfo .btnJoin::after {
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+}
+
+.userPartyInfo .btnJoin:hover::after {
+    transform: skewX(-45deg) scale(1, 1);
+}
+
+.userPartyInfo .btnJoin:hover span {
+    -webkit-text-stroke: 1px #F5BAFF;
+    color: white;
+}
+
+.userPartyInfo .btnJoin span {
+    background: linear-gradient(to right, rgba(218, 69, 211, 1), rgba(245, 186, 255, 1));
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--purple);
+    font-size: 1.3em;
+    transition: 0.3s linear;
+}
+
+.imgProfileUser {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    border: 1px solid var(--purple);
+}
+
+.nameUser {
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.partyInfo {
+    margin-left: 1em;
+    font-family: var(--inter);
+    font-weight: 600;
+    color: var(--purple);
+}
+
+.partyInfo h2 {
+    font-family: var(--inter);
+    font-size: 2.5em;
+    color: var(--purple);
+    margin-block: 0.5em 0em;
+}
+
+.descriptionParty {
+    margin-inline: 0 1em;
+    margin-bottom: 1em;
+    max-height: 16.5vh;
+    overflow: auto;
+    border: 1px solid var(--purple);
+
+    scrollbar-color: transparent;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        /* Ancho de la barra de desplazamiento */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: white;
+        /* Color de la barra de desplazamiento */
+    }
+
+}
+
+.descriptionParty h4 {
+    margin-block: 0;
+}

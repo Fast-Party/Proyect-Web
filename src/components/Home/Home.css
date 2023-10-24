@@ -4,31 +4,38 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+
   }
 
 .Home-header{
     border-bottom: 2px solid var(--purple);
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
-    height: 6em;
+    height: 5em;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
 }
 .main {
     display: flex;
-    flex: 1; 
+    flex: 1;
+    height: 87vh;
   }
 
-.sidebar {
+  .sidebar {
     border-right: 1px solid var(--purple);
-    width: 12em;
-    height: 100%;
+    width: 11em;
     padding-inline: 10px;
     display: flex;
+    position: sticky;
+    top: 0;
     flex-direction: column;
     justify-content: space-between;
-}
+  }
 h1{
     font-family: var(--inter);    
     font-weight: 800; 
@@ -122,49 +129,21 @@ h1{
     cursor: pointer;
 }
 
-.main-content {
-    flex: 1;
+.parties{
     display: flex;
-    margin: 20px 50px 50px 20px;
-    border: 2px solid var(--purple);
-    background: linear-gradient(180deg, #FFF 0%, rgba(149, 40, 144, 0.20) 100%);
-}
-
-.imgParty{
-    width: 50%;
-    height: calc(100% - 2em);
-    margin-block: 1em;
-    margin-left: 1em;
-    object-fit: cover;
-}
-
-.divider {
-    height: 100%; 
-    width: 1px; 
-    background-color: var(--purple);
-    margin-left: 1em;
-  }
-
-
-  .userPartyInfo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 1em;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
-    font-family: var(--inter);
-    font-weight: 800;
-    color: var(--purple);
-  }
+    height: 100%;
+    overflow-y: auto;
 
-  .imgProfileUser{
-        width: 3.5em;
-        height: 3.5em;
-        border-radius: 50%;
-        border: 1px solid var(--purple);
-  }
+    scrollbar-color: transparent; 
 
-  .nameUser{
-    font-size: 1.5em;
-  }
+    &::-webkit-scrollbar {
+        width: 5px; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+    background-color: var(--purple); /* Color de la barra de desplazamiento */
+    }
+
+}
