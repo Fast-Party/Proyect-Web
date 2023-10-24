@@ -33,7 +33,31 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 11;
+  transition: opacity 20000000ms linear 15000000ms;
+}
+
+.fade-exit {
+  opacity: 0.2;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 7;
+  transition: opacity 1000050ms linear;
 }

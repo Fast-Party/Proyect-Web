@@ -1,37 +1,37 @@
 import { Link } from 'react-router-dom';
-import './Login.css';
+import './Register.css';
 
-function Login() {
+function Register() {
     return (
-        <div className='Login'>
+        <div className='Register'>
         <h1 class="sweet-title">
             <span  data-text="Fast Party">Fast Party</span>
         </h1>
         <div className='inputBox'>
                 <form>
-                    <h3 className='signIn'>Sign In</h3>
+                    <h3 className='register'>Register</h3>
                     <hr className='titleSeparation'/>
                     <div className='mb-2'>
                         <input placeholder='Username' className='username'></input>
                     </div>
                     <div className='mb-2'>
+                        <input placeholder='Email' className='email'></input>
+                    </div>
+                    <div className='mb-2'>
                         <input placeholder='Password' className='password'></input>
+                    </div>
+                    <div className='mb-2'>
+                        <input placeholder='Repeat Password' className='password'></input>
                     </div>
                     
                     <div className='d-grid'>
-                        <button className='buttonLogin'>
-                            LOGIN
+                        <button className='buttonRegister'>
+                            REGISTER
                         </button>
                     </div>
                     <p className='changeRegister'>
-                        You dont have an account? <Link className='linkChangeRegister' to={"/Register"}><a className='linkChangeRegister'>Register</a></Link>
-                        <br/>
+                        You already have an account? <Link className='linkChangeRegister' to={"/"}><a className='linkChangeRegister'>Login</a></Link>
                     </p>
-                    <p href='' className='forgetPassword'>
-                        Forgot your Password?
-                    </p>
-                        
-                    
                 </form>
             </div>
             <svg preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
@@ -44,4 +44,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Register;
