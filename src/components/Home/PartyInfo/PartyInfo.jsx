@@ -7,8 +7,9 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const PartyInfo = ({ data }) => {
 
-const { carouselImages, hostImage, hostName, eventName, location, date, theme, musicType, aforation, ageRange, description } = data;
+const { Images, hostImage, hostName, eventName, location, date, theme, musicType, aforation, ageRange, description } = data;
 
+/*
 
 function ImageCarousel({ images }) {
     const settings = {
@@ -28,13 +29,14 @@ function ImageCarousel({ images }) {
         </Slider>
     );
   }
+*/
 
-
+/*<ImageCarousel images={Images} className='carouelImg' />*/
 
   return (
     <div className="main-content">
-      <ImageCarousel images={carouselImages} className='carouelImg'/>
-      <div className="divider"></div>
+      <img src={Images} alt="Party Image" className="imgParty" />
+      <div className="divider"></div>   
       <div className="infoParty">
         <div className='userPartyInfo'>
           <img className='imgProfileUser' src={hostImage} alt='Profile Image Host Party'></img>

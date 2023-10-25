@@ -15,12 +15,12 @@
 }
 
 /* Estilos del carrusel */
+/*
 .slick-slider {
     width: 65%; 
     height: calc(100% - 4.2em);
     margin-block: 1em 0em;
     margin-inline: 1em 0em;
-    background-color: aqua;
 }
 
 .slick-slide img {
@@ -49,7 +49,7 @@
     filter: invert(0%);
 }
   
-
+*/
 .divider {
     height: 100%;
     width: 1px;
@@ -63,7 +63,7 @@
     flex-direction: row;
     margin: 1em 0 0 1em;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 1em);
     font-family: var(--inter);
     font-weight: 800;
     color: var(--purple);
@@ -75,6 +75,8 @@
 
 .userPartyInfo .btnJoin {
     position: relative;
+    margin-left: auto;
+    margin-right: 1vw;
     overflow: hidden;
     z-index: 1;
     font-family: var(--inter);
@@ -145,21 +147,30 @@
 }
 
 .partyInfo {
-    margin-left: 1em;
     font-family: var(--inter);
     font-weight: 600;
     color: var(--purple);
 }
 
 .partyInfo h2 {
+    margin-left: 0.3em;
     font-family: var(--inter);
     font-size: 2.5em;
     color: var(--purple);
     margin-block: 0.5em 0em;
 }
 
+hr{
+    margin: 0.5em 0em;
+    width: calc(100% - 2em);
+}
+
+.divPInfo{
+    margin-left: 1em;
+}
+
 .descriptionParty {
-    margin-inline: 0 1em;
+    margin-inline:  1em;
     margin-bottom: 1em;
     max-height: 16.5vh;
     overflow: auto;
@@ -169,16 +180,25 @@
 
     &::-webkit-scrollbar {
         width: 5px;
-        /* Ancho de la barra de desplazamiento */
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: white;
-        /* Color de la barra de desplazamiento */
     }
 
 }
+/*
+@media (min-width: 1600px) {
+    .descriptionParty {
+        max-height: 40vh;
+    }
 
+}
+*/
 .descriptionParty h4 {
-    margin-block: 0;
+    margin: 0.5em;
+}
+
+.descriptionParty p {
+    margin: 0.5em;
 }
