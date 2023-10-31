@@ -75,9 +75,19 @@ const eventDataFromDatabase2 = [
   
 ];
 
+//NO FUNCIONA
 
+/*
+document.addEventListener("DOMContentLoaded", function () {
+  const btnMenu = document.querySelector('.icon_menu');
+  
+  btnMenu.addEventListener('click', () => {
+    console.log('click');
+    document.querySelector('.sidebar').classList.toggle('hideSidebar');
+  });
+});
+*/
 const Home = () => {
-
 
     return(
         <div className="app-container">

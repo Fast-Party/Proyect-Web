@@ -26,7 +26,13 @@
     height: 87vh;
   }
 
-  .sidebar {
+/*METODO PARA OCULTAR LA BARRA LATERAL*/
+
+.hideSidebar{
+    margin-left: -12.3em;
+}
+
+.sidebar {
     border-right: 1px solid var(--purple);
     width: 11em;
     padding-inline: 10px;
@@ -35,7 +41,8 @@
     top: 0;
     flex-direction: column;
     justify-content: space-between;
-  }
+}
+
 h1{
     font-family: var(--inter);    
     font-weight: 800; 
