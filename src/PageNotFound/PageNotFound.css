@@ -1,12 +1,8 @@
 .notFound {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    /* resulting css */
+    /* width: 250px; */
+    background: linear-gradient(to top, #d340ccd7, #e9a1ee);
+    background-repeat: no-repeat;
     height: 100vh;
-    background: 
-	linear-gradient(180deg, rgba(185,53,179,1), rgba(89,48,92,1)),
-	url(../noise.svg);
-    color: white;
-    /* background-color: #a53aa7; */
+
 }

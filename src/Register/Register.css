@@ -137,12 +137,12 @@
 
     color: white;
     background: #ee8cff;
-    transition: 0.4s;
+    transition: .7s;
 }
 
 .buttonRegister:hover {
     color: #ee8cff;
-    border-radius: 0ch;
+    border-radius: 3px;
     border-color: #ee8cff;
     border-style: solid;
     /* box-shadow: 3px 3px 0 #d206f7; */
