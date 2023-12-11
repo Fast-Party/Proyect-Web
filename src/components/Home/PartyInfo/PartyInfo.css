@@ -163,6 +163,7 @@
 hr{
     margin: 0.5em 0em;
     width: calc(100% - 2em);
+    border: 1px solid #C98DC6;
 }
 
 .divPInfo{

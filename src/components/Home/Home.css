@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-
   }
 
 .Home-header{
@@ -20,39 +19,88 @@
     background-color: white;
     z-index: 2;
 }
+
+.Home-header h1{
+    font-family: var(--inter);    
+    font-weight: 800; 
+    transform: skewX(-8deg) translate(-50%, -50%);
+    background: linear-gradient(var(--purple) , #000000);
+    background-clip: text;
+    color: transparent;
+    font-size: 3.5em;
+    position: fixed;
+    left: 50%;
+    top: 0%;
+}
+
 .main {
     display: flex;
     flex: 1;
-    height: 87vh;
   }
 
 /*METODO PARA OCULTAR LA BARRA LATERAL*/
 
 .hideSidebar{
-    margin-left: -12.3em;
+    margin-left: -14em;
+}
+
+.screen{
+    display: flex;
+    height: calc(100vh - 5.1em);
 }
 
 .sidebar {
     border-right: 1px solid var(--purple);
-    width: 11em;
-    padding-inline: 10px;
+    width: 14em;
     display: flex;
-    position: sticky;
-    top: 0;
     flex-direction: column;
-    justify-content: space-between;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
 }
 
-h1{
-    font-family: var(--inter);    
-    font-weight: 800; 
-    transform: skewX(-8deg);
-    background: linear-gradient(var(--purple) , #000000);
-    background-clip: text;
-    color: transparent;
-    font-size: 3.5em;
-    padding-inline: 0.15em;
+nav{
+    flex: 1;
 }
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+nav li{
+    padding-block: 4vh;
+    box-sizing: border-box;
+    transition: background-color .5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+nav li:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    transition: 0.3s ease-in-out;
+}
+
+nav li:last-child a{
+    margin: 0;
+}
+
 
 .left-icons,
 .right-icons{
@@ -94,8 +142,8 @@ h1{
 }
 
 .joinbtn{
-    width: 4em;
-    height: 4em;
+    width: 4.5em;
+    height: 4.5em;
 }
 
 .homebtn{
@@ -106,7 +154,7 @@ h1{
     display: flex;
     align-items: center;
     width: 100%;
-    margin-top: 3em;
+
 }
 
 .icon-name {
@@ -119,17 +167,14 @@ h1{
 .btnCircle{
     display: grid;
     place-items: center;
-    margin-bottom: 2em;
-
 }
+
 .addCircle{
     color: var(--purple);
     width: 5em;
     height: 5em;
 }
 
-.icon-with-name:hover,
-.btnCircle:hover,
 .icon_user:hover,
 .icon_bell:hover,
 .icon_menu:hover{
