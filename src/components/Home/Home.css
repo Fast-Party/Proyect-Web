@@ -191,7 +191,7 @@ nav li:last-child a{
     scrollbar-color: transparent; 
 
     &::-webkit-scrollbar {
-        width: 5px; 
+        width: 3px; 
     }
 
     &::-webkit-scrollbar-thumb {

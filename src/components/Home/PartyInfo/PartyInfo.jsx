@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const PartyInfo = ({ data }) => {
 
-const { Images, hostImage, hostName, eventName, location, date, theme, musicType, aforation, ageRange, description } = data;
+const {Images, hostImage, hostName, eventName, location, date, theme, musicType, aforation, ageRange, description } = data;
 
 /*
 

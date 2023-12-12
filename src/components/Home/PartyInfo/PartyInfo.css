@@ -1,5 +1,4 @@
 .main-content {
-    flex: 1;
     display: flex;
     margin: 20px 50px 40px 20px;
     border: 2px solid var(--purple);
@@ -8,9 +7,7 @@
 
 .imgParty {
     width: 65%;
-    height: calc(100% - 2em);
-    margin-block: 1em;
-    margin-left: 1em;
+    margin: 1em;
     object-fit: cover;
 }
 
@@ -54,9 +51,12 @@
     height: 100%;
     width: 1px;
     background-color: var(--purple);
-    margin-left: 1em;
 }
 
+.infoParty{
+    display: flex;
+    flex-direction: column;
+}
 
 .userPartyInfo {
     display: flex;
@@ -144,6 +144,7 @@
     font-size: 1.5em;
     margin-left: 0.5em;
     margin-right: 0.5em;
+    font-weight: 700;
 }
 
 .partyInfo {
@@ -155,7 +156,7 @@
 .partyInfo h2 {
     margin-left: 0.3em;
     font-family: var(--inter);
-    font-size: 2.5em;
+    font-size: 2.3em;
     color: var(--purple);
     margin-block: 0.5em 0em;
 }
@@ -170,12 +171,17 @@ hr{
     margin-left: 1em;
 }
 
+.divPInfo p{
+   margin-block: 1.5em;
+}
+
+
 .descriptionParty {
-    margin-inline:  1em;
     margin-bottom: 1em;
+    margin-inline:  1em;
     max-height: 16.5vh;
     overflow: auto;
-    border: 1px solid var(--purple);
+    border: 1px solid #C181BE;
 
     scrollbar-color: transparent;
 

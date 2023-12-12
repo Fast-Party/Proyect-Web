@@ -60,7 +60,7 @@ const eventDataFromDatabase2 = [
     description: 'Join us at the South Beach party of the year! You can expect a beachfront venue, DJ music, cocktails, sunset views, fire dancers, a glow party, VIP lounges, beach games, gourmet food, surprise performances, and plenty of Instagram-worthy moments. Get ready to have a blast under the South Beach sun!',
   },
   {
-    Images: "https://papers.co/wallpaper/papers.co-nr21-party-club-dance-night-nature-music-35-3840x2160-4k-wallpaper.jpg",
+    Images: "https://wallpapercave.com/wp/wp2646803.jpg",
     hostImage: 'https://images.squarespace-cdn.com/content/v1/5446f93de4b0a3452dfaf5b0/1626904421257-T6I5V5IQ4GI2SJ8EU82M/Above+Avalon+Neil+Cybart',
     hostName: 'Alb3rt',
     eventName: 'Night Pool Party',
@@ -150,6 +150,7 @@ const Home = () => {
           </div>
           <main className="main">
             <div className="parties">
+              {/*Cambiar el index por un identificador de la fiesta*/}
               {eventDataFromDatabase2.map((eventData, index) => (
                 <PartyInfo key={index} data={eventData} />
               ))}
