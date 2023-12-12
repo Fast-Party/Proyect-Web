@@ -9,6 +9,7 @@
     width: 65%;
     margin: 1em;
     object-fit: cover;
+    cursor: pointer;
 }
 
 /* Estilos del carrusel */
@@ -53,7 +54,7 @@
     background-color: var(--purple);
 }
 
-.infoParty{
+.infoParty {
     display: flex;
     flex-direction: column;
 }
@@ -100,7 +101,6 @@
     content: "";
     position: absolute;
     background: var(--purple);
-    ;
     z-index: -1;
     padding: 0.85em 0.75em;
     display: block;
@@ -151,6 +151,11 @@
     font-family: var(--inter);
     font-weight: 600;
     color: var(--purple);
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
 }
 
 .partyInfo h2 {
@@ -159,9 +164,10 @@
     font-size: 2.3em;
     color: var(--purple);
     margin-block: 0.5em 0em;
+    cursor: pointer;
 }
 
-hr{
+.partyInfo hr{
     margin: 0.5em 0em;
     width: calc(100% - 2em);
     border: 1px solid #C98DC6;
@@ -172,19 +178,21 @@ hr{
 }
 
 .divPInfo p{
-   margin-block: 1.5em;
+   margin-block: 0.7em;
 }
 
 
 .descriptionParty {
+    margin-top: 0.5em;
     margin-bottom: 1em;
-    margin-inline:  1em;
-    max-height: 16.5vh;
+    margin-inline: 1em;
+    height: 17vh;
     overflow: auto;
     border: 1px solid #C181BE;
-
     scrollbar-color: transparent;
+    flex: auto;
 
+    scrollbar-width: thin;
     &::-webkit-scrollbar {
         width: 5px;
     }
@@ -192,8 +200,8 @@ hr{
     &::-webkit-scrollbar-thumb {
         background-color: white;
     }
-
 }
+
 /*
 @media (min-width: 1600px) {
     .descriptionParty {
