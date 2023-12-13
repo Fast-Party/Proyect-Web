@@ -60,7 +60,10 @@ function ImageCarousel({ images }) {
           </div>
           <div className='descriptionParty'>
             <h4>Description:</h4>
-            <p>{description}</p>
+            <hr />
+            <div className='containerDescription'>
+              <p>{description}</p>
+            </div>
           </div>
         </div>
       </div>

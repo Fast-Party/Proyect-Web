@@ -187,20 +187,34 @@
     margin-bottom: 1em;
     margin-inline: 1em;
     height: 17vh;
-    overflow: auto;
     border: 1px solid #C181BE;
-    scrollbar-color: transparent;
     flex: auto;
+    display: flex;
+    flex-direction: column;
 
-    scrollbar-width: thin;
+
+}
+
+.containerDescription{
+    flex: auto;
+    overflow: auto;
     &::-webkit-scrollbar {
-        width: 5px;
+        width: 3px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: white;
+        background-color: #ffc0cb;
+        border-radius: 15px;
     }
+   
 }
+
+.descriptionParty hr{
+    margin: 0;
+    width: 40%;
+    border: 1px solid #C98DC6;
+}
+
 
 /*
 @media (min-width: 1600px) {

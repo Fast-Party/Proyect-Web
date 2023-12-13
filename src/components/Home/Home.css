@@ -27,10 +27,10 @@
     background: linear-gradient(var(--purple) , #000000);
     background-clip: text;
     color: transparent;
-    font-size: 3.5em;
+    font-size: 3em;
     position: fixed;
     left: 50%;
-    top: 0%;
+    top: 0.5%;
 }
 
 .main {
@@ -41,7 +41,7 @@
 /*METODO PARA OCULTAR LA BARRA LATERAL*/
 
 .hideSidebar{
-    margin-left: -14em;
+    margin-left: -12em;
 }
 
 .screen{
@@ -51,7 +51,7 @@
 
 .sidebar {
     border-right: 1px solid var(--purple);
-    width: 14em;
+    width: 12em;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -93,7 +93,7 @@ nav li a {
     color: var(--primary-color);
     display: flex;
     align-items: center;
-    margin-left: 1em;
+    margin-left: 1.5em;
     transition: 0.3s ease-in-out;
 }
 
@@ -112,33 +112,34 @@ nav li:last-child a{
     padding-left: 1em;
 }
 
+
 .right-icons{
     padding-right: 1em;
 }
 
-.icon_menu,
 .icon_bell,
 .icon_user {
   margin-right: 10px;
 }
 
 .icon_menu{
-    width: 3em;
-    height: 3em;
+    width: 2.3em;
+    height: 2.3em;
     color: var(--purple);
+    margin-left: 10px;
 }
 
 .icon_bell{
-    width: 3em;
-    height: 3em;
+    width: 2.3em;
+    height: 2.3em;
 }
 
 .homebtn,
 .searchbtn,
 .icon_user
 {
-    width: 3.5em;
-    height: 3.5em;
+    width: 2.8em;
+    height: 2.8em;
 }
 
 .joinbtn{
@@ -160,7 +161,7 @@ nav li:last-child a{
 .icon-name {
     margin-left: 10px; 
     font-family: var(--inter-extralight);
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 100;
 }
 
@@ -171,8 +172,8 @@ nav li:last-child a{
 
 .addCircle{
     color: var(--purple);
-    width: 5em;
-    height: 5em;
+    width: 4.5em;
+    height: 4.5em;
 }
 
 .icon_user:hover,
@@ -192,10 +193,12 @@ nav li:last-child a{
 
     &::-webkit-scrollbar {
         width: 3px; 
+        
     }
 
     &::-webkit-scrollbar-thumb {
     background-color: var(--purple); /* Color de la barra de desplazamiento */
-    }
+    border-radius: 15px;
+}
 
 }
