@@ -36,7 +36,7 @@
 .main {
     display: flex;
     flex: 1;
-  }
+}
 
 /*METODO PARA OCULTAR LA BARRA LATERAL*/
 
@@ -188,7 +188,6 @@ nav li:last-child a{
     width: 100%;
     height: 100%;
     overflow-y: auto;
-
     scrollbar-color: transparent; 
 
     &::-webkit-scrollbar {

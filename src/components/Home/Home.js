@@ -2,6 +2,9 @@ import './Home.css';
 import React, { useState, useEffect } from 'react';
 import PartyInfo from './PartyInfo/PartyInfo';
 
+//Llamadas API
+import { obtenerFiestas } from "../../services/Home/obtenerFiestas";
+
 /*ICONS*/
 
 import { CiMenuBurger } from "react-icons/ci";
@@ -91,10 +94,23 @@ const eventDataFromDatabase2 = [
 const Home = () => {
 
   const [isSidebarHidden, setIsSidebarHidden] = useState(false);
+  const [totalParties, settotalParties] = useState([]);
+
+  useEffect(() => {
+    getParties();
+  }, []);
+
 
   const handleMenuClick = () => {
       setIsSidebarHidden((prev) => !prev);
   };
+
+  const getParties = async () => {
+    const dtNow = new Date();
+    const response = await obtenerFiestas(41.3851, 2.1734, dtNow );
+    console.log(response);
+  };
+  
 
     return(
         <div className="app-container">
@@ -152,7 +168,7 @@ const Home = () => {
             <div className="parties">
               {/*Cambiar el index por un identificador de la fiesta*/}
               {eventDataFromDatabase2.map((eventData, index) => (
-                <PartyInfo key={index} data={eventData} />
+                <PartyInfo key={index} data={eventData}/>
               ))}
             </div>
           </main>
