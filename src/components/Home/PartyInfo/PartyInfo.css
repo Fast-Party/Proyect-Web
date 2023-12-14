@@ -58,6 +58,7 @@
 .infoParty {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .userPartyInfo {
@@ -69,6 +70,7 @@
     font-family: var(--inter);
     font-weight: 800;
     color: var(--purple);
+
 }
 
 
