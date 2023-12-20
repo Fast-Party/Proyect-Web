@@ -2,6 +2,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, useLocation, Link} from "react-router-dom";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 import Login from './Login/Login';
 import Register from './Register/Register';
 import PageNotFound from './PageNotFound/PageNotFound';

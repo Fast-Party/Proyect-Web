@@ -1,39 +1,90 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './Register.css';
+import axios from 'axios';
+
+import toast, { Toaster } from 'react-hot-toast';
+
+const showToast = () => toast('Here is a basic toast message.');
+
 
 function Register() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [repeatPassword, setRepeatPassword] = useState('');
 
-    const handleRegister = async () => {
-        try {
-            const response = await fetch('http://212.227.227.190:3000/registerUser', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ username, email, password }),
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                if (data.message === 'Registration successful') {
-                    // Registration successful, handle redirection or other actions
-                    console.log('Registration successful');
-                } else {
-                    // Handle registration failure
-                    console.error('Registration failed');
-                }
-            } else {
-                // Handle HTTP error
-                console.error('HTTP error during registration:', response.status);
-            }
-        } catch (error) {
-            console.error('Error during registration:', error);
-        }
+    const checkEmailValid = () => {
+        // Replace this with your email validation logic
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     };
+
+    const handleRegister = async (event) => {
+        event.preventDefault(); // Prevents the default form submission behavior
+
+        const isEmailValid = checkEmailValid();
+
+        if (password !== repeatPassword) {
+            toast.error('Password are not equal', {
+                style: {
+                    border: '1px solid #e9a1ee',
+                    padding: '16px',
+                    color: '#713200',
+                    background: 'linear-gradient(315deg, #f368e0 0%, #d3d3d3 74%)'
+
+                },
+                iconTheme: {
+                    primary: '#e9a1ee',
+                    secondary: '#af2fa9',
+                },
+            });
+            console.log('invalid????');
+        } else if (!isEmailValid) {
+            toast.error('Invalid email!');
+        } else {
+            try {
+                console.log('in da try????');
+                const response = await axios.post('http://212.227.227.190:3000/registerUser', {
+                    username,
+                    email,
+                    password
+                });
+
+                if (response.status === 200) {
+                    const data = response.data;
+                    if (data.message === 'Registration successful') {
+                        // Registration successful, handle redirection or other actions
+                        toast.success('Look at my styles.', {
+                            style: {
+                                border: '1px solid #713200',
+                                padding: '16px',
+                                color: '#713200',
+                            },
+                            iconTheme: {
+                                primary: '#713200',
+                                secondary: '#FFFAEE',
+                            },
+                        });
+                        console.log('Registration successful');
+                    } else {
+                        // Handle registration failure
+                        console.error('Registration failed');
+                        toast.error('Registration failed');
+                    }
+                } else {
+                    // Handle HTTP error
+                    console.error('HTTP error during registration:', response.status);
+                    toast.error(`HTTP error during registration: ${response.status}`);
+                }
+            } catch (error) {
+                // Handle other errors
+                console.error('Error during registration:', error);
+                toast.error(`Error during registration: ${error.message}`);
+            }
+        };
+    };
+
 
     return (
         <div className='Register'>
@@ -41,11 +92,12 @@ function Register() {
                 <span data-text="Fast Party">Fast Party</span>
             </h1>
             <div className='inputBox'>
-                <form>
+                <form onSubmit={handleRegister}>
                     <h3 className='register'>Register</h3>
                     <hr className='titleSeparation' />
                     <div className='mb-2'>
                         <input
+                            required
                             placeholder='Username'
                             id='username'
                             className='username'
@@ -55,6 +107,7 @@ function Register() {
                     </div>
                     <div className='mb-2'>
                         <input
+                            required
                             placeholder='Email'
                             id='email'
                             className='email'
@@ -64,6 +117,7 @@ function Register() {
                     </div>
                     <div className='mb-2'>
                         <input
+                            required
                             placeholder='Password'
                             id='password'
                             className='password'
@@ -74,25 +128,32 @@ function Register() {
                     </div>
                     <div className='mb-2'>
                         <input
+                            required
                             placeholder='Repeat Password'
                             className='password'
                             type='password'
+                            value={repeatPassword}
+                            onChange={(e) => setRepeatPassword(e.target.value)}
                         />
                     </div>
 
                     <div className='d-grid'>
                         <button
+                            type='submit'
                             id='buttonRegister'
                             className='buttonRegister'
-                            onClick={handleRegister}
                         >
                             REGISTER
                         </button>
+                        <Toaster
+                            position="top-right"
+                            reverseOrder={true}
+                        />
                     </div>
                     <p className='changeRegister'>
                         You already have an account?{' '}
                         <Link className='linkChangeRegister' to={"/"}>
-                            <a className='linkChangeRegister'>Login</a>
+                            Login
                         </Link>
                     </p>
                 </form>
